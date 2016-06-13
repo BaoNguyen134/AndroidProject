@@ -55,9 +55,10 @@
                     android:inputType="number" />
 
                 <Button
+                    android:textSize="25sp"
                     android:id="@+id/btn_connect"
                     android:layout_width="150dp"
-                    android:background="#37866b"
+                    android:background="@drawable/btn_ketnoi"
                     android:textColor="@android:color/white"
                     android:layout_gravity="center"
                     android:layout_height="wrap_content"
@@ -72,6 +73,7 @@
                 android:layout_marginBottom="20dp">
 
                 <LinearLayout
+                    android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
@@ -288,7 +290,7 @@
                         android:text="Cập Nhật"
                         android:textColor="#fff"
                         android:textSize="25sp"
-                        android:background="#ff6600"
+                        android:background="@drawable/btn_capnhat"
                         android:layout_gravity="center"
                         android:layout_width="150dp"
                         android:layout_height="50dp"
@@ -333,7 +335,7 @@
                         android:layout_marginRight="10dp"
                         android:layout_width="160dp"
                         android:layout_height="50dp"
-                        android:background="#ff0f03"
+                        android:background="@drawable/tbn_dieukhien"
                         android:text="BẬT MÁY BƠM"
                         android:textColor="#ffffff"
                         android:textSize="16sp"
@@ -343,7 +345,7 @@
                         android:onClick="TatMayBom"
                         android:layout_width="160dp"
                         android:layout_height="50dp"
-                        android:background="#ff0f03"
+                        android:background="@drawable/tbn_dieukhien"
                         android:text="TẮT MÁY BƠM"
                         android:textColor="#fff"
                         android:textSize="16sp"
@@ -363,7 +365,7 @@
                         android:layout_marginRight="10dp"
                         android:layout_width="160dp"
                         android:layout_height="50dp"
-                        android:background="#ff0f03"
+                        android:background="@drawable/tbn_dieukhien"
                         android:text="BẬT PHUN SƯƠNG"
                         android:textColor="#fff"
                         android:textSize="16sp"
@@ -373,7 +375,7 @@
                         android:onClick="TatPhunSuong"
                         android:layout_width="160dp"
                         android:layout_height="50dp"
-                        android:background="#ff0f03"
+                        android:background="@drawable/tbn_dieukhien"
                         android:textColor="#fff"
                         android:text="TẮT PHUN SƯƠNG"
                         android:textSize="16sp"
@@ -393,7 +395,7 @@
                         android:layout_marginRight="10dp"
                         android:layout_width="160dp"
                         android:layout_height="50dp"
-                        android:background="#ff0f03"
+                        android:background="@drawable/tbn_dieukhien"
                         android:text="TỰ ĐỘNG"
                         android:textColor="#fff"
                         android:textSize="16sp"
@@ -403,7 +405,7 @@
                         android:onClick="BangTay"
                         android:layout_width="160dp"
                         android:layout_height="50dp"
-                        android:background="#ff0f03"
+                        android:background="@drawable/tbn_dieukhien"
                         android:text="BẰNG TAY"
                         android:textColor="#fff"
                         android:textSize="16sp"
@@ -468,7 +470,7 @@
                         android:gravity="center"
                         android:text="SEND"
                         android:textColor="#fff"
-                        android:background="#2756ff"
+                        android:background="@drawable/btn_send"
                         android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -509,7 +511,7 @@
                         android:gravity="center"
                         android:text="SEND"
                         android:textColor="#fff"
-                        android:background="#2756ff"
+                        android:background="@drawable/btn_send"
                         android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -550,7 +552,7 @@
                         android:gravity="center"
                         android:text="SEND"
                         android:textColor="#fff"
-                        android:background="#2756ff"
+                        android:background="@drawable/btn_send"
                         android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -591,7 +593,7 @@
                         android:gravity="center"
                         android:text="SEND"
                         android:textColor="#fff"
-                        android:background="#2756ff"
+                        android:background="@drawable/btn_send"
                         android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -610,7 +612,7 @@
                         android:gravity="center"
                         android:text="SET TIME"
                         android:textColor="#fff"
-                        android:background="#2756ff"
+                        android:background="@drawable/btn_send"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
