@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.Calendar;
+
 public class MainActivity extends AppCompatActivity {
 
     //For debug
@@ -26,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     private EditText tatMayBom;
     private EditText batPhunSuong;
     private EditText tatPhunSuong;
-    private EditText setTime;
     private TextView ReceivedTime;
     private TextView ReceivedMode;
     private TextView ReceivedNhietDo;
@@ -63,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
         tatMayBom = (EditText) findViewById(R.id.tatMayBom);
         batPhunSuong = (EditText) findViewById(R.id.batPhunSuong);
         tatPhunSuong = (EditText) findViewById(R.id.tatPhunSuong);
-        setTime = (EditText) findViewById(R.id.setTime);
 
         ReceivedTime = (TextView) findViewById(R.id.ReceivedTime);
         ReceivedMode = (TextView) findViewById(R.id.ReceivedMode);
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
     private void init() {
         //Load the datas from share preferences
         SharedPreferences sharedata = getSharedPreferences("data", 0);
-        String ip = sharedata.getString("ip", "192.168.0.80");
+        String ip = sharedata.getString("ip", "192.168.0.100");
         String port = sharedata.getString("port", "8080");
         edit_ip.setText(ip);
         edit_port.setText(port);
@@ -107,8 +107,7 @@ public class MainActivity extends AppCompatActivity {
                     //Toast.makeText(MainActivity.this, "1", Toast.LENGTH_LONG).show();
                     recDataString.append(readMessage);
                     int endOfLineIndex = recDataString.indexOf("~");
-                    if (endOfLineIndex > 0)
-                    {
+                    if (endOfLineIndex > 0) {
                         // cat chuoi dau tien
                         int dauPhayDauTien = recDataString.indexOf(","); // tim vi tri dau "," dau tien
                         sensor0 = recDataString.substring(0, dauPhayDauTien);
@@ -285,7 +284,7 @@ public class MainActivity extends AppCompatActivity {
                         ReceivedNhietDo.setText(sensor8 + "°C");
                         ReceivedDoAmDat.setText(sensor9 + "%");
 
-                        recDataString.delete(0,recDataString.length());
+                        recDataString.delete(0, recDataString.length());
                         //Toast.makeText(MainActivity.this, recDataString.toString(), Toast.LENGTH_LONG).show();
                     }
                 }
@@ -334,9 +333,16 @@ public class MainActivity extends AppCompatActivity {
         try {
             Message msg = new Message();
             msg.what = 0x852;
-            msg.obj = "CD" + setTime.getText().toString();
+            Calendar cal = Calendar.getInstance();
+
+            int second = cal.get(Calendar.SECOND);
+            int minute = cal.get(Calendar.MINUTE);
+            //24 hour format
+            int hourofday = cal.get(Calendar.HOUR_OF_DAY);
+            String ss = String.valueOf(hourofday) + ":" + String.valueOf(minute) + ":"
+                    + String.valueOf(second);
+            msg.obj = "CD" + ss;
             clientThread.sendHandler.sendMessage(msg);
-            batMayBom.setText("");
         } catch (Exception e) {
             e.printStackTrace();
         }
