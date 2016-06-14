@@ -1,16 +1,27 @@
 package com.baonguyen.bai006_vuonthongminh;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.Socket;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
@@ -40,11 +51,11 @@ public class MainActivity extends AppCompatActivity {
             sensor7, sensor8, sensor9, sensor10, sensor11, sensor12, sensor13,
             sensor14, sensor15, sensor16, sensor17, sensor18;
     private String readMessage;
+    private ProgressBar loading;
 
     //About the socket
     Handler bluetoothIn;
     ClientThread clientThread;
-    int dem = 0;
 
     /**
      * Called when the activity is first created.
@@ -59,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         txt_ip = (TextView) findViewById(R.id.txt_ip);
         txt_port = (TextView) findViewById(R.id.txt_port);
         btn_connect = (Button) this.findViewById(R.id.btn_connect);
+        loading = (ProgressBar) this.findViewById(R.id.loading);
 
         batMayBom = (EditText) findViewById(R.id.batMayBom);
         tatMayBom = (EditText) findViewById(R.id.tatMayBom);
@@ -80,13 +92,50 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View arg0) {
-                // TODO Auto-generated method stub
+                KetNoi();
+            }
+
+            private void KetNoi() {
                 String ip = edit_ip.getText().toString();
                 String port = edit_port.getText().toString();
-
                 clientThread = new ClientThread(bluetoothIn, ip, port);
                 new Thread(clientThread).start();
+                edit_port.setVisibility(View.GONE);
+                edit_ip.setVisibility(View.GONE);
+                txt_port.setVisibility(View.GONE);
+                txt_ip.setVisibility(View.GONE);
+                btn_connect.setVisibility(View.GONE);
+                loading.setVisibility(View.VISIBLE);
+                delay(1);
             }
+
+            private void delay(int seconds){
+                final int milliseconds = seconds * 1000;
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        final Handler handler = new Handler();
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                PhanHoi();
+                            }
+                        }, milliseconds);
+                    }
+                });
+            }
+
+            private void PhanHoi(){
+                try {
+                    Message msg = new Message();
+                    msg.what = 0x852;
+                    msg.obj = "1";
+                    clientThread.sendHandler.sendMessage(msg);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
         });
     }
 
@@ -103,8 +152,6 @@ public class MainActivity extends AppCompatActivity {
             public void handleMessage(Message msg) {
                 if (msg.what == 0x123) {
                     readMessage = (String) msg.obj;
-                    //Toast.makeText(MainActivity.this, readMessage, Toast.LENGTH_LONG).show();
-                    //Toast.makeText(MainActivity.this, "1", Toast.LENGTH_LONG).show();
                     recDataString.append(readMessage);
                     int endOfLineIndex = recDataString.indexOf("~");
                     if (endOfLineIndex > 0) {
@@ -284,8 +331,13 @@ public class MainActivity extends AppCompatActivity {
                         ReceivedNhietDo.setText(sensor8 + "°C");
                         ReceivedDoAmDat.setText(sensor9 + "%");
 
+                        int so = Integer.parseInt(sensor9);
+
+                        if (so >= 0 && so <= 100) {
+                            loading.setVisibility(View.GONE);
+                        }
+
                         recDataString.delete(0, recDataString.length());
-                        //Toast.makeText(MainActivity.this, recDataString.toString(), Toast.LENGTH_LONG).show();
                     }
                 }
             }
@@ -299,12 +351,6 @@ public class MainActivity extends AppCompatActivity {
             msg.obj = "1";
             clientThread.sendHandler.sendMessage(msg);
         }
-
-        edit_port.setVisibility(View.GONE);
-        edit_ip.setVisibility(View.GONE);
-        txt_port.setVisibility(View.GONE);
-        txt_ip.setVisibility(View.GONE);
-        btn_connect.setVisibility(View.GONE);
     }
 
     public void TuDong(View view) {
@@ -331,6 +377,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void setTime(View view) {
         try {
+            String ss = null;
             Message msg = new Message();
             msg.what = 0x852;
             Calendar cal = Calendar.getInstance();
@@ -339,9 +386,39 @@ public class MainActivity extends AppCompatActivity {
             int minute = cal.get(Calendar.MINUTE);
             //24 hour format
             int hourofday = cal.get(Calendar.HOUR_OF_DAY);
-            String ss = String.valueOf(hourofday) + ":" + String.valueOf(minute) + ":"
-                    + String.valueOf(second);
-            msg.obj = "CD" + ss;
+            if (second >= 10 && minute >= 10 && hourofday >= 10) {      // 1 1 1
+                ss = String.valueOf(hourofday) + ":" + String.valueOf(minute) + ":"
+                        + String.valueOf(second);
+                msg.obj = "CD" + ss;
+            } else if (second >= 10 && minute >= 10 && hourofday < 10) {  // 1 1 0
+                ss = "0" + String.valueOf(hourofday) + ":" + String.valueOf(minute) + ":"
+                        + String.valueOf(second);
+                msg.obj = "CD" + ss;
+            } else if (second >= 10 && minute < 10 && hourofday >= 10) {  // 1 0 1
+                ss = String.valueOf(hourofday) + ":" + "0" + String.valueOf(minute) + ":"
+                        + String.valueOf(second);
+                msg.obj = "CD" + ss;
+            } else if (second >= 10 && minute < 10 && hourofday < 10) { // 1 0 0
+                ss = "0" + String.valueOf(hourofday) + ":" + "0" + String.valueOf(minute) + ":"
+                        + String.valueOf(second);
+                msg.obj = "CD" + ss;
+            } else if (second < 10 && minute >= 10 && hourofday >= 10) { // 0 1 1
+                ss = String.valueOf(hourofday) + ":" + String.valueOf(minute) + ":"
+                        + "0" + String.valueOf(second);
+                msg.obj = "CD" + ss;
+            } else if (second < 10 && minute >= 10 && hourofday < 10) { // 0 1 0
+                ss = "0" + String.valueOf(hourofday) + ":" + String.valueOf(minute) + ":"
+                        + "0" + String.valueOf(second);
+                msg.obj = "CD" + ss;
+            } else if (second < 10 && minute < 10 && hourofday >= 10) { // 0 0 1
+                ss = String.valueOf(hourofday) + ":" + "0" + String.valueOf(minute) + ":"
+                        + "0" + String.valueOf(second);
+                msg.obj = "CD" + ss;
+            } else if (second < 10 && minute < 10 && hourofday < 10) { // 0 0 0
+                ss = "0" + String.valueOf(hourofday) + ":" + "0" + String.valueOf(minute) + ":"
+                        + "0" + String.valueOf(second);
+                msg.obj = "CD" + ss;
+            }
             clientThread.sendHandler.sendMessage(msg);
         } catch (Exception e) {
             e.printStackTrace();
@@ -436,6 +513,171 @@ public class MainActivity extends AppCompatActivity {
             msg.obj = "BT2";
             clientThread.sendHandler.sendMessage(msg);
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void BatDen(View view) {
+        try {
+            Message msg = new Message();
+            msg.what = 0x852;
+            msg.obj = "BT4";
+            clientThread.sendHandler.sendMessage(msg);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void TatDen(View view) {
+        try {
+            Message msg = new Message();
+            msg.what = 0x852;
+            msg.obj = "BT5";
+            clientThread.sendHandler.sendMessage(msg);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void NangPin(View view) {
+        try {
+            Message msg = new Message();
+            msg.what = 0x852;
+            msg.obj = "BT7";
+            clientThread.sendHandler.sendMessage(msg);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void HaPin(View view) {
+        try {
+            Message msg = new Message();
+            msg.what = 0x852;
+            msg.obj = "BT6";
+            clientThread.sendHandler.sendMessage(msg);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+
+            case R.id.action_favorite:
+                Intent i = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(i);
+                return true;
+
+            case R.id.exit:
+                finish();
+                return true;
+
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+
+        }
+    }
+}
+
+
+// Kết nối
+
+class ClientThread implements Runnable {
+    //For debug
+    private final String TAG = "ClientThread";
+
+    private Socket socket;
+    private String ip;
+    private int port;
+    private Handler receiveHandler;
+    public Handler sendHandler;
+    BufferedReader bufferedReader;
+    private InputStream inputStream;
+    private OutputStream outputStream;
+    public boolean isConnect = false;
+
+    public ClientThread(Handler handler, String ip, String port) {
+        // TODO Auto-generated constructor stub
+        this.receiveHandler = handler;
+        this.ip = ip;
+        this.port = Integer.valueOf(port);
+    }
+
+    public ClientThread() {
+    }
+
+    public void run() {
+        try {
+            socket = new Socket(ip, port);
+            isConnect = socket.isConnected();
+            inputStream = socket.getInputStream();
+            outputStream = socket.getOutputStream();
+
+            //To monitor if receive Msg from Server
+            new Thread() {
+                @Override
+                public void run() {
+                    byte[] buffer = new byte[1024];
+
+                    final StringBuilder stringBuilder = new StringBuilder();
+                    try {
+                        while (socket.isConnected()) {
+                            int readSize = inputStream.read(buffer);
+
+                            //If Server is stopping
+                            if (readSize == -1) {
+                                inputStream.close();
+                                outputStream.close();
+                            }
+                            if (readSize == 0) continue;
+
+                            //Update the receive editText
+                            stringBuilder.append(new String(buffer, 0, readSize));
+                            Message msg = new Message();
+                            msg.what = 0x123;
+                            msg.obj = stringBuilder.toString();
+                            receiveHandler.sendMessage(msg);
+                            // xóa bộ đệm cho lần sau
+                            stringBuilder.delete(0, stringBuilder.length());
+                        }
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            }.start();
+
+            //To Send Msg to Server
+            Looper.prepare();
+            sendHandler = new Handler() {
+                @Override
+                public void handleMessage(Message msg) {
+                    if (msg.what == 0x852) {
+                        try {
+                            outputStream.write((msg.obj.toString() + "\r\n").getBytes());
+                            outputStream.flush();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            };
+            Looper.loop();
+
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }

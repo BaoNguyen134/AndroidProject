@@ -7,5 +7,6 @@
     <string name="txt_port">Port:</string>
     <string name="edit_port">8080</string>
     <string name="btn_connect">KẾT NỐI</string>
+    <string name="action_favorite">Chạy Lại</string>
 
 </resources>
