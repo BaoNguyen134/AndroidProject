@@ -1,0 +1,21 @@
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:gravity="center">
+
+    <Button
+        android:background="@color/colorAccent"
+        android:id="@+id/IconButton06"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Thêm ảnh vào Button"
+        android:textColor="@android:color/white"
+        android:drawableStart="@drawable/action_search"
+        android:drawableEnd="@drawable/action_search"
+        android:drawableBottom="@drawable/action_search"
+        android:drawableTop="@drawable/action_search"/>
+</LinearLayout>
