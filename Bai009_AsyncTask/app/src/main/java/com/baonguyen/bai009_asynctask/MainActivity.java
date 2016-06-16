@@ -44,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params) {
+            for(int i = 1; i < 4; i++){
+                publishProgress("OK " + i);
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
             return "FINISH";
         }
 
@@ -56,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onProgressUpdate(String... values) {
             super.onProgressUpdate(values);
+            tvNoiDung.append(values[0]+"\n");
         }
     }
 }
