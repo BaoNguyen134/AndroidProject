@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.baonguyen.smartgarden.SmartHomeMainActivity" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="SmartHome Controller"
+            android:textColor="#009900"
+            android:textSize="28sp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp" >
+
+            <Button
+                android:id="@+id/btconnect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="ConnectUp"
+                android:text="Connect"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:layout_toRightOf="@id/btconnect"
+                android:clickable="false"
+                android:onClick="Update"
+                android:text="Getdata"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btDisconnect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:layout_toRightOf="@id/btUpdate"
+                android:clickable="false"
+                android:onClick="DisConnect"
+                android:text="Disconnect"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clien 1"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5sp" >
+
+            <Button
+                android:id="@+id/btC1R1"
+                android:layout_width="130sp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:onClick="SendMessageC1R1"
+                android:text="Relay 1"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btC1R2"
+                android:layout_width="130sp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:onClick="SendMessageC1R2"
+                android:text="Relay 2"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clien 2"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5sp" >
+
+            <Button
+                android:id="@+id/btC2R1"
+                android:layout_width="130sp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:onClick="SendMessageC2R1"
+                android:text="Relay 1"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btC2R2"
+                android:layout_width="130sp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:onClick="SendMessageC2R2"
+                android:text="Relay 2"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clien 3"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5sp" >
+
+            <Button
+                android:id="@+id/btC3R1"
+                android:layout_width="130sp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:onClick="SendMessageC3R1"
+                android:text="Relay 1"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btC3R2"
+                android:layout_width="130sp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:onClick="SendMessageC3R2"
+                android:text="Relay 2"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Status"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5sp"
+            android:text="Disconect"
+            android:textColor="#FF0000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="5sp"
+            android:text="Designed by HVD"
+            android:textColor="#FF0000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Electric Power University"
+            android:textColor="#FF0000"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>
