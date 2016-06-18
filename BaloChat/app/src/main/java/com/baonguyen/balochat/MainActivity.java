@@ -19,7 +19,6 @@ import org.json.JSONObject;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     {
         try {
-            mSocket = IO.socket("http://192.168.0.100:3000");
+            mSocket = IO.socket("http://tuhoc360.net:3000");
         } catch (URISyntaxException e) {}
     }
 
@@ -141,8 +140,6 @@ public class MainActivity extends AppCompatActivity {
 
             Toast.makeText(getApplicationContext(), "Stop recording...",
                     Toast.LENGTH_SHORT).show();
-        } catch (IllegalStateException e) {
-            e.printStackTrace();
         } catch (RuntimeException e) {
             e.printStackTrace();
         }
@@ -156,9 +153,6 @@ public class MainActivity extends AppCompatActivity {
             BufferedInputStream buf = new BufferedInputStream(new FileInputStream(file));
             buf.read(bytes, 0, bytes.length);
             buf.close();
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
