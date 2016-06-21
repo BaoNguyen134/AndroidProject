@@ -1,0 +1,286 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.baonguyen.dieukhientb.SmartHomeMainActivity" >
+
+    <ScrollView
+        android:id="@+id/scrollViewp"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvIP"
+                android:text="Nhập IP:"
+                android:textSize="20sp"
+                android:textColor="@color/colorAccent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edtIP"
+                android:inputType="textPhonetic"
+                android:textSize="20sp"
+                android:textColor="@color/colorAccent"
+                android:text="192.168.0.101"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvPort"
+                android:text="Nhập PORT:"
+                android:textSize="20sp"
+                android:textColor="@color/colorAccent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edtPort"
+                android:inputType="numberDecimal"
+                android:textSize="20sp"
+                android:textColor="@color/colorAccent"
+                android:text="8080"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:onClick="CaiDat"
+                    android:layout_gravity="center"
+                    android:text="Cài Đặt"
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:onClick="MacDinh"
+                    android:layout_gravity="center"
+                    android:text="Mặc Định"
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:elevation="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="BẢNG ĐIỀU KHIỂN"
+                android:textColor="@color/colorAccent"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/Status"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5sp"
+                android:text="Trạng Thái: "
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvUpdate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5sp"
+                android:text="Chế Độ Hiện Tại: "
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <Button
+                    android:layout_gravity="center"
+                    android:id="@+id/btconnect"
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="ConnectUp"
+                    android:text="Kết nối" />
+
+                <Button
+                    android:textColor="@color/colorAccent"
+                    android:id="@+id/btUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15sp"
+                    android:clickable="false"
+                    android:onClick="Update"
+                    android:text="Cập Nhật" />
+
+                <Button
+                    android:textColor="@color/colorAccent"
+                    android:id="@+id/btDisconnect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15sp"
+                    android:clickable="false"
+                    android:onClick="DisConnect"
+                    android:text="Ngắt Kết Nối" />
+            </LinearLayout>
+
+            <TextView
+                android:elevation="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BẬT TẮT ĐỘNG CƠ"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:textColor="@color/colorAccent"
+                    android:id="@+id/btBatDC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50sp"
+                    android:clickable="false"
+                    android:onClick="BatDC"
+                    android:text="Bật" />
+
+                <Button
+                    android:textColor="@color/colorAccent"
+                    android:id="@+id/btTatCD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50sp"
+                    android:clickable="false"
+                    android:onClick="TatDC"
+                    android:text="Tắt" />
+            </LinearLayout>
+
+            <TextView
+                android:elevation="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ĐIỀU KHIỂN LED 1"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:textColor="@color/colorAccent"
+                    android:id="@+id/btLED1B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50sp"
+                    android:clickable="false"
+                    android:onClick="BatLED1"
+                    android:text="Bật" />
+
+                <Button
+                    android:textColor="@color/colorAccent"
+                    android:id="@+id/btLED1T"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50sp"
+                    android:clickable="false"
+                    android:onClick="TatLED1"
+                    android:text="Tắt"/>
+                <Button
+                    android:textColor="@color/colorAccent"
+                    android:id="@+id/btLED1N"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50sp"
+                    android:clickable="false"
+                    android:onClick="NhayLED1"
+                    android:text="Nháy" />
+            </LinearLayout>
+
+            <TextView
+                android:elevation="10dp"
+                android:textColor="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ĐIỀU KHIỂN LED 2"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5sp" >
+
+                <Button
+                    android:textColor="@color/colorAccent"
+                    android:id="@+id/btLED2B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50sp"
+                    android:clickable="false"
+                    android:onClick="BatLED2"
+                    android:text="Bật"/>
+
+                <Button
+                    android:textColor="@color/colorAccent"
+                    android:id="@+id/btLED2T"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50sp"
+                    android:clickable="false"
+                    android:onClick="TatLED2"
+                    android:text="Tắt" />
+            </LinearLayout>
+
+            <TextView
+                android:elevation="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ĐIỀU KHIỂN PIN MẶT TRỜI"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5sp" >
+
+                <Button
+                    android:textColor="@color/colorAccent"
+                    android:id="@+id/btBatPin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50sp"
+                    android:clickable="false"
+                    android:onClick="BatPin"
+                    android:text="Bật"/>
+
+                <Button
+                    android:textColor="@color/colorAccent"
+                    android:id="@+id/btTatPin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50sp"
+                    android:clickable="false"
+                    android:onClick="TatPin"
+                    android:text="Tắt" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
