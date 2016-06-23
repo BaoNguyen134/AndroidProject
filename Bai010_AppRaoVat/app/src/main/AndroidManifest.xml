@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".DannSachSanPham" />
-        <activity android:name=".CapNhatSanPham"></activity>
+        <activity android:name=".CapNhatSanPham"/>
     </application>
 
 </manifest>

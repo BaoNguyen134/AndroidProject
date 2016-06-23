@@ -161,178 +161,6 @@ public class MainActivity extends AppCompatActivity {
                         // cat chuoi thu 2
                         sensor1 = recDataString.substring(dauPhayDauTien + 1,endOfLineIndex);
 
-                        /*// cat chuoi thu 2
-                        String s1 = recDataString.substring(dauPhayDauTien + 1);
-                        int dauPhayThu2 = s1.indexOf(",");
-                        sensor1 = s1.substring(0, dauPhayThu2);
-
-                        // cat chuoi thu 3
-                        String s2 = recDataString.substring(dauPhayThu2 + dauPhayDauTien + 2);
-                        int dauPhayThu3 = s2.indexOf(",");
-                        sensor2 = s2.substring(0, dauPhayThu3);
-
-                        // cat chuoi thu 4
-                        String s3 = recDataString.substring(dauPhayThu3 + dauPhayThu2 +
-                                dauPhayDauTien + 3);
-                        int dauPhayThu4 = s3.indexOf(",");
-                        sensor3 = s3.substring(0, dauPhayThu4);
-
-                        // cat chuoi thu 5
-                        String s4 = recDataString.substring(dauPhayThu4 + dauPhayThu3 + dauPhayThu2
-                                + dauPhayDauTien + 4);
-                        int dauPhayThu5 = s4.indexOf(",");
-                        sensor4 = s4.substring(0, dauPhayThu5);
-
-                        // cat chuoi thu 6
-                        String s5 = recDataString.substring(dauPhayThu5 + dauPhayThu4 + dauPhayThu3
-                                + dauPhayThu2 + dauPhayDauTien + 5);
-                        int dauPhayThu6 = s5.indexOf(",");
-                        sensor5 = s5.substring(0, dauPhayThu6);
-
-                        // cat chuoi thu 7
-                        String s6 = recDataString.substring(dauPhayThu6 + dauPhayThu5 + dauPhayThu4
-                                + dauPhayThu3 + dauPhayThu2 + dauPhayDauTien + 6);
-                        int dauPhayThu7 = s6.indexOf(",");
-                        sensor6 = s6.substring(0, dauPhayThu7);
-
-                        // cat chuoi thu 8
-                        String s7 = recDataString.substring(dauPhayThu7 + dauPhayThu6 +
-                                dauPhayThu5 + dauPhayThu4
-                                + dauPhayThu3 + dauPhayThu2 + dauPhayDauTien + 7);
-                        int dauPhayThu8 = s7.indexOf(",");
-                        sensor7 = s7.substring(0, dauPhayThu8);
-
-                        // cat chuoi thu 9
-                        String s8 = recDataString.substring(dauPhayThu7 + dauPhayThu6 +
-                                dauPhayThu5 + dauPhayThu4 + dauPhayThu8
-                                + dauPhayThu3 + dauPhayThu2 + dauPhayDauTien + 8);
-                        int dauPhayThu9 = s8.indexOf(",");
-                        sensor8 = s8.substring(0, dauPhayThu9);
-
-                        // cat chuoi thu 10
-                        String s9 = recDataString.substring(dauPhayThu7 + dauPhayThu6 +
-                                dauPhayThu5 + dauPhayThu4 + dauPhayThu8 + dauPhayThu9
-                                + dauPhayThu3 + dauPhayThu2 + dauPhayDauTien + 9);
-                        int dauPhayThu10 = s9.indexOf(",");
-                        sensor9 = s9.substring(0, dauPhayThu10);
-
-                        // cat chuoi thu 11
-                        String s10 = recDataString.substring(dauPhayThu7 + dauPhayThu6 +
-                                dauPhayThu5 + dauPhayThu4 + dauPhayThu8 + dauPhayThu9
-                                + dauPhayThu3 + dauPhayThu2 + dauPhayDauTien
-                                + dauPhayThu10 + 10);
-                        int dauPhayThu11 = s10.indexOf(",");
-                        sensor10 = s10.substring(0, dauPhayThu11);
-
-                        // cat chuoi thu 12
-                        String s11 = recDataString.substring(dauPhayThu7 + dauPhayThu6 +
-                                dauPhayThu5 + dauPhayThu4 + dauPhayThu8 + dauPhayThu9
-                                + dauPhayThu3 + dauPhayThu2 + dauPhayDauTien
-                                + dauPhayThu10 + dauPhayThu11 + 11);
-                        int dauPhayThu12 = s11.indexOf(",");
-                        sensor11 = s11.substring(0, dauPhayThu12);
-
-                        // cat chuoi thu 13
-                        String s12 = recDataString.substring(dauPhayThu7 + dauPhayThu6 +
-                                dauPhayThu5 + dauPhayThu4 + dauPhayThu8 + dauPhayThu9
-                                + dauPhayThu3 + dauPhayThu2 + dauPhayDauTien
-                                + dauPhayThu10 + dauPhayThu11 + dauPhayThu12 + 12);
-                        int dauPhayThu13 = s12.indexOf(",");
-                        sensor12 = s12.substring(0, dauPhayThu13);
-
-                        // cat chuoi thu 14
-                        String s13 = recDataString.substring(dauPhayThu7 + dauPhayThu6 +
-                                dauPhayThu5 + dauPhayThu4 + dauPhayThu8 + dauPhayThu9
-                                + dauPhayThu3 + dauPhayThu2 + dauPhayDauTien
-                                + dauPhayThu10 + dauPhayThu11 + dauPhayThu12
-                                + dauPhayThu13 + 13);
-                        int dauPhayThu14 = s13.indexOf(",");
-                        sensor13 = s13.substring(0, dauPhayThu14);
-
-                        // cat chuoi thu 15
-                        String s14 = recDataString.substring(dauPhayThu7 + dauPhayThu6 +
-                                dauPhayThu5 + dauPhayThu4 + dauPhayThu8 + dauPhayThu9
-                                + dauPhayThu3 + dauPhayThu2 + dauPhayDauTien
-                                + dauPhayThu10 + dauPhayThu11 + dauPhayThu12
-                                + dauPhayThu13 + dauPhayThu14 + 14);
-                        int dauPhayThu15 = s14.indexOf(",");
-                        sensor14 = s14.substring(0, dauPhayThu15);
-
-                        // cat chuoi thu 16
-                        String s15 = recDataString.substring(dauPhayThu7 + dauPhayThu6 +
-                                dauPhayThu5 + dauPhayThu4 + dauPhayThu8 + dauPhayThu9
-                                + dauPhayThu3 + dauPhayThu2 + dauPhayDauTien
-                                + dauPhayThu10 + dauPhayThu11 + dauPhayThu12
-                                + dauPhayThu13 + dauPhayThu14 + dauPhayThu15 + 15);
-                        int dauPhayThu16 = s15.indexOf(",");
-                        sensor15 = s15.substring(0, dauPhayThu16);
-
-                        // cat chuoi thu 17
-                        String s16 = recDataString.substring(dauPhayThu7 + dauPhayThu6 +
-                                dauPhayThu5 + dauPhayThu4 + dauPhayThu8 + dauPhayThu9
-                                + dauPhayThu3 + dauPhayThu2 + dauPhayDauTien
-                                + dauPhayThu10 + dauPhayThu11 + dauPhayThu12
-                                + dauPhayThu13 + dauPhayThu14 + dauPhayThu15
-                                + dauPhayThu16 + 16);
-                        int dauPhayThu17 = s16.indexOf(",");
-                        sensor16 = s16.substring(0, dauPhayThu17);
-
-                        // cat chuoi thu 18
-                        String s17 = recDataString.substring(dauPhayThu7 + dauPhayThu6 +
-                                dauPhayThu5 + dauPhayThu4 + dauPhayThu8 + dauPhayThu9
-                                + dauPhayThu3 + dauPhayThu2 + dauPhayDauTien
-                                + dauPhayThu10 + dauPhayThu11 + dauPhayThu12
-                                + dauPhayThu13 + dauPhayThu14 + dauPhayThu15
-                                + dauPhayThu16 + dauPhayThu17 + 17);
-                        int dauPhayThu18 = s17.indexOf(",");
-                        sensor17 = s17.substring(0, dauPhayThu18);
-
-                        // cat chuoi thu 19
-                        sensor18 = recDataString.substring(dauPhayThu7 + dauPhayThu6 +
-                                dauPhayThu5 + dauPhayThu4 + dauPhayThu8 + dauPhayThu9
-                                + dauPhayThu3 + dauPhayThu2 + dauPhayDauTien
-                                + dauPhayThu10 + dauPhayThu11 + dauPhayThu12
-                                + dauPhayThu13 + dauPhayThu14 + dauPhayThu15
-                                + dauPhayThu16 + dauPhayThu17 + dauPhayThu18 + 18, endOfLineIndex);*/
-
-//                        ReceivedTime.setText(sensor1 + ":" + sensor2 + ":" + sensor3);
-//                        if (sensor10.equals("TD") && sensor4.equals("1") && sensor6.equals("1")) {
-//                            ReceivedMode.setText("Tự Động");
-//                            ReceivedMayBom.setText("Tắt");
-//                            ReceivedPhunSuong.setText("Tắt");
-//                        } else if (sensor10.equals("TD") && sensor4.equals("1") && sensor6.equals("0")) {
-//                            ReceivedMode.setText("Tự Động");
-//                            ReceivedMayBom.setText("Tắt");
-//                            ReceivedPhunSuong.setText("Bật");
-//                        } else if (sensor10.equals("TD") && sensor4.equals("0") && sensor6.equals("1")) {
-//                            ReceivedMode.setText("Tự Động");
-//                            ReceivedMayBom.setText("Bật");
-//                            ReceivedPhunSuong.setText("Tắt");
-//                        } else if (sensor10.equals("TD") && sensor4.equals("0") && sensor6.equals("0")) {
-//                            ReceivedMode.setText("Tự Động");
-//                            ReceivedMayBom.setText("Bật");
-//                            ReceivedPhunSuong.setText("Bật");
-//                        } else if (sensor10.equals("BT") && sensor4.equals("1") && sensor6.equals("1")) {
-//                            ReceivedMode.setText("Bằng Tay");
-//                            ReceivedMayBom.setText("Tắt");
-//                            ReceivedPhunSuong.setText("Tắt");
-//                        } else if (sensor10.equals("BT") && sensor4.equals("1") && sensor6.equals("0")) {
-//                            ReceivedMode.setText("Bằng Tay");
-//                            ReceivedMayBom.setText("Tắt");
-//                            ReceivedPhunSuong.setText("Bật");
-//                        } else if (sensor10.equals("BT") && sensor4.equals("0") && sensor6.equals("1")) {
-//                            ReceivedMode.setText("Bằng Tay");
-//                            ReceivedMayBom.setText("Bật");
-//                            ReceivedPhunSuong.setText("Tắt");
-//                        } else if (sensor10.equals("BT") && sensor4.equals("0") && sensor6.equals("0")) {
-//                            ReceivedMode.setText("Bằng Tay");
-//                            ReceivedMayBom.setText("Bật");
-//                            ReceivedPhunSuong.setText("Bật");
-//                        }
-//                        ReceivedDoAmKhongKhi.setText(sensor7 + "%");
-//                        ReceivedNhietDo.setText(sensor8 + "°C");
-//                        ReceivedDoAmDat.setText(sensor9 + "%");
-
                         if(sensor1.equals("1")){
                             ReceivedMode.setText("Tự Động");
                         } else {
@@ -360,125 +188,27 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-//    public void TuDong(View view) {
-//        try {
-//            Message msg = new Message();
-//            msg.what = 0x852;
-//            msg.obj = "TD";
-//            clientThread.sendHandler.sendMessage(msg);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    public void BangTay(View view) {
-//        try {
-//            Message msg = new Message();
-//            msg.what = 0x852;
-//            msg.obj = "BT";
-//            clientThread.sendHandler.sendMessage(msg);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    public void setTime(View view) {
-//        try {
-//            String ss = null;
-//            Message msg = new Message();
-//            msg.what = 0x852;
-//            Calendar cal = Calendar.getInstance();
-//
-//            int second = cal.get(Calendar.SECOND);
-//            int minute = cal.get(Calendar.MINUTE);
-//            //24 hour format
-//            int hourofday = cal.get(Calendar.HOUR_OF_DAY);
-//            if (second >= 10 && minute >= 10 && hourofday >= 10) {      // 1 1 1
-//                ss = String.valueOf(hourofday) + ":" + String.valueOf(minute) + ":"
-//                        + String.valueOf(second);
-//                msg.obj = "CD" + ss;
-//            } else if (second >= 10 && minute >= 10 && hourofday < 10) {  // 1 1 0
-//                ss = "0" + String.valueOf(hourofday) + ":" + String.valueOf(minute) + ":"
-//                        + String.valueOf(second);
-//                msg.obj = "CD" + ss;
-//            } else if (second >= 10 && minute < 10 && hourofday >= 10) {  // 1 0 1
-//                ss = String.valueOf(hourofday) + ":" + "0" + String.valueOf(minute) + ":"
-//                        + String.valueOf(second);
-//                msg.obj = "CD" + ss;
-//            } else if (second >= 10 && minute < 10 && hourofday < 10) { // 1 0 0
-//                ss = "0" + String.valueOf(hourofday) + ":" + "0" + String.valueOf(minute) + ":"
-//                        + String.valueOf(second);
-//                msg.obj = "CD" + ss;
-//            } else if (second < 10 && minute >= 10 && hourofday >= 10) { // 0 1 1
-//                ss = String.valueOf(hourofday) + ":" + String.valueOf(minute) + ":"
-//                        + "0" + String.valueOf(second);
-//                msg.obj = "CD" + ss;
-//            } else if (second < 10 && minute >= 10 && hourofday < 10) { // 0 1 0
-//                ss = "0" + String.valueOf(hourofday) + ":" + String.valueOf(minute) + ":"
-//                        + "0" + String.valueOf(second);
-//                msg.obj = "CD" + ss;
-//            } else if (second < 10 && minute < 10 && hourofday >= 10) { // 0 0 1
-//                ss = String.valueOf(hourofday) + ":" + "0" + String.valueOf(minute) + ":"
-//                        + "0" + String.valueOf(second);
-//                msg.obj = "CD" + ss;
-//            } else if (second < 10 && minute < 10 && hourofday < 10) { // 0 0 0
-//                ss = "0" + String.valueOf(hourofday) + ":" + "0" + String.valueOf(minute) + ":"
-//                        + "0" + String.valueOf(second);
-//                msg.obj = "CD" + ss;
-//            }
-//            clientThread.sendHandler.sendMessage(msg);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    public void tatPhunSuong(View view) {
-//        try {
-//            Message msg = new Message();
-//            msg.what = 0x852;
-//            msg.obj = "TS" + tatPhunSuong.getText().toString();
-//            clientThread.sendHandler.sendMessage(msg);
-//            tatPhunSuong.setText("");
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    public void batPhunSuong(View view) {
-//        try {
-//            Message msg = new Message();
-//            msg.what = 0x852;
-//            msg.obj = "BS" + batPhunSuong.getText().toString();
-//            clientThread.sendHandler.sendMessage(msg);
-//            batPhunSuong.setText("");
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    public void tatMayBom(View view) {
-//        try {
-//            Message msg = new Message();
-//            msg.what = 0x852;
-//            msg.obj = "HT" + tatMayBom.getText().toString();
-//            clientThread.sendHandler.sendMessage(msg);
-//            tatMayBom.setText("");
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    public void batMayBom(View view) {
-//        try {
-//            Message msg = new Message();
-//            msg.what = 0x852;
-//            msg.obj = "HG" + batMayBom.getText().toString();
-//            clientThread.sendHandler.sendMessage(msg);
-//            batMayBom.setText("");
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
+    public void TuDong(View view) {
+        try {
+            Message msg = new Message();
+            msg.what = 0x852;
+            msg.obj = "TUDONG";
+            clientThread.sendHandler.sendMessage(msg);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void BangTay(View view) {
+        try {
+            Message msg = new Message();
+            msg.what = 0x852;
+            msg.obj = "BANGTAY";
+            clientThread.sendHandler.sendMessage(msg);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     public void BatMayBom(View view) {
         try {
@@ -501,28 +231,6 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
-//    public void BatPhunSuong(View view) {
-//        try {
-//            Message msg = new Message();
-//            msg.what = 0x852;
-//            msg.obj = "BT3";
-//            clientThread.sendHandler.sendMessage(msg);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    public void TatPhunSuong(View view) {
-//        try {
-//            Message msg = new Message();
-//            msg.what = 0x852;
-//            msg.obj = "BT2";
-//            clientThread.sendHandler.sendMessage(msg);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
 
     public void BatDen(View view) {
         try {
@@ -582,6 +290,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_favorite:
                 Intent i = new Intent(MainActivity.this, MainActivity.class);
                 startActivity(i);
+                finish();
                 return true;
 
             case R.id.exit:
@@ -600,7 +309,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             Message msg = new Message();
             msg.what = 0x852;
-            msg.obj = "N";
+            msg.obj = "NHAY";
             clientThread.sendHandler.sendMessage(msg);
         } catch (Exception e) {
             e.printStackTrace();

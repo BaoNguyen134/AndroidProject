@@ -575,6 +575,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_favorite:
                 Intent i = new Intent(MainActivity.this, MainActivity.class);
                 startActivity(i);
+                finish();
                 return true;
 
             case R.id.exit:

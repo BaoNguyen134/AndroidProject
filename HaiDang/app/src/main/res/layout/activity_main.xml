@@ -337,6 +337,34 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:onClick="TuDong"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:text="TỰ ĐỘNG"
+                        android:textColor="#ff0f03"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:onClick="BangTay"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:text="BẰNG TAY"
+                        android:textColor="#ff0f03"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -387,34 +415,6 @@
                         android:layout_height="50dp"
                         android:textColor="#ff0f03"
                         android:text="TẮT PHUN SƯƠNG"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </LinearLayout>-->
-
-                <!--<LinearLayout
-                    android:gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:onClick="TuDong"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_width="160dp"
-                        android:layout_height="50dp"
-                        android:text="TỰ ĐỘNG"
-                        android:textColor="#ff0f03"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <Button
-                        android:onClick="BangTay"
-                        android:layout_width="160dp"
-                        android:layout_height="50dp"
-                        android:text="BẰNG TAY"
-                        android:textColor="#ff0f03"
                         android:textSize="16sp"
                         android:textStyle="bold" />
                 </LinearLayout>-->
