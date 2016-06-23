@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.baonguyen.projectelectronic.MainActivity">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/imageViewHinh"
+        android:src="@drawable/camera"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:hint="Nhập Tên"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextTen"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/imageViewHinh"
+        android:layout_alignStart="@+id/imageViewHinh"
+        android:layout_alignRight="@+id/imageViewHinh"
+        android:layout_alignEnd="@+id/imageViewHinh" />
+
+    <EditText
+        android:hint="Nhập Giá"
+        android:inputType="numberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextGia"
+        android:layout_below="@+id/editTextTen"
+        android:layout_alignRight="@+id/editTextTen"
+        android:layout_alignEnd="@+id/editTextTen"
+        android:layout_alignLeft="@+id/editTextTen"
+        android:layout_alignStart="@+id/editTextTen" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thêm Mới"
+        android:id="@+id/btnThem"
+        android:layout_below="@+id/editTextGia"
+        android:layout_alignRight="@+id/editTextGia"
+        android:layout_alignEnd="@+id/editTextGia"
+        android:layout_alignLeft="@+id/editTextGia"
+        android:layout_alignStart="@+id/editTextGia" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Danh Sách Sản Phẩm"
+        android:id="@+id/buttonDanhSach"
+        android:layout_below="@+id/btnThem"
+        android:layout_alignLeft="@+id/btnThem"
+        android:layout_alignStart="@+id/btnThem"
+        android:layout_alignRight="@+id/btnThem"
+        android:layout_alignEnd="@+id/btnThem" />
+</RelativeLayout>
