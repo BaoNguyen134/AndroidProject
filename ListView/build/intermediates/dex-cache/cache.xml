@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\DELL\Documents\GitHub\AndroidProject\ListView\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="0e8f2a6667fab01bf19fab082e35d92cf7311056">
+        <dex dex="C:\Users\DELL\Documents\GitHub\AndroidProject\ListView\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_72b2a797d3cea5b19dc7fe0ae60301ae051c1892\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\DELL\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="C:\Users\DELL\Documents\GitHub\AndroidProject\ListView\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-v4-18.0.0_c1877d979d14953c20767edfd37d7ddf2e1e543b\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\DELL\Documents\GitHub\AndroidProject\ListView\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="d28cf4e04779617219bcf7cd0d0b81a58b528c3d">
+        <dex dex="C:\Users\DELL\Documents\GitHub\AndroidProject\ListView\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_d95f4e7cd38c76b9037a756e8bd27c476559ec79\classes.dex" />
+    </item>
+
+</items>

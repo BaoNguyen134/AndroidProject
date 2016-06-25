@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
                         new LuuSanPham().execute();
                     }
                 });
-
             }
         });
 
@@ -70,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, DannSachSanPham.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params) {
-            return POST_URL("http://192.168.0.100/laravel/public/SanPham",null);
+            return POST_URL("http://tuhoc360.net/laravel/public/SanPham",null);
         }
 
         @Override
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             super.onPostExecute(s);
             try {
                 JSONObject object = new JSONObject(s);
-                Toast.makeText(MainActivity.this,"Thêm Sản Phẩm Có ID: "+object.getInt("id"), Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this,"Thêm Sản Phẩm Thành Công!", Toast.LENGTH_LONG).show();
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -155,5 +155,7 @@ public class MainActivity extends AppCompatActivity {
         imgHinh = (ImageView) findViewById(R.id.imageViewHinh);
         edtTen = (EditText) findViewById(R.id.editTextTen);
         edtGia = (EditText) findViewById(R.id.editTextGia);
+        edtTen.setHint("Nhập tên không dấu");
+        edtGia.setHint("Nhập giá sản phẩm");
     }
 }

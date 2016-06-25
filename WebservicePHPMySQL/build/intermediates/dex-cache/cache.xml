@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\DELL\Documents\GitHub\AndroidProject\WebservicePHPMySQL\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="024bd9e462bf8bcea3b8665d45d55f03a1384d7c">
+        <dex dex="C:\Users\DELL\Documents\GitHub\AndroidProject\WebservicePHPMySQL\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_11b2648a7e51c7e1f0576819b1064acc3e572749\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\DELL\Documents\GitHub\AndroidProject\WebservicePHPMySQL\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="5159877b7da14570a19ee1da0afe2a755dbc05bb">
+        <dex dex="C:\Users\DELL\Documents\GitHub\AndroidProject\WebservicePHPMySQL\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_e917b0901ee5c018c7859ce9a29b7428d21889ed\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\DELL\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="C:\Users\DELL\Documents\GitHub\AndroidProject\WebservicePHPMySQL\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-v4-18.0.0_c1877d979d14953c20767edfd37d7ddf2e1e543b\classes.dex" />
+    </item>
+
+</items>

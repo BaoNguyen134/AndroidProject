@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="22"
+    density="xhdpi"
+    format="7"
+    timestamp="93298426716508"
+    token="890171963269348589" >
+
+    <task
+        name="javac"
+        duration="2370" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="998" />
+    <task
+        name="verifier"
+        duration="1338" />
+
+    <artifact
+        location="C:\Users\DELL\Documents\GitHub\AndroidProject\WebservicePHPMySQL\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="93298426716508" >
+        <artifact
+            location="C:\Users\DELL\Documents\GitHub\AndroidProject\WebservicePHPMySQL\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

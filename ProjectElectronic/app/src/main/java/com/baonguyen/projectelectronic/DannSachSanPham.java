@@ -34,16 +34,17 @@ public class DannSachSanPham extends AppCompatActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                new LoadSanPham().execute("http://192.168.0.100/laravel/public/SanPham");
+                new LoadSanPham().execute("http://tuhoc360.net/laravel/public/SanPham");
             }
         });
 
         lvSanPham.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(DannSachSanPham.this, CapNhatSanPham.class);
+                Intent intent = new Intent(DannSachSanPham.this, ChiTietSanPham.class);
                 intent.putExtra("data",mangSanPham.get(position).IdSP);
                 startActivity(intent);
+                finish();
             }
         });
     }
@@ -92,7 +93,7 @@ public class DannSachSanPham extends AppCompatActivity {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                content.append(line + "\n");
+                content.append(line).append("\n");
             }
             bufferedReader.close();
         } catch (Exception e) {

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Food Trip - 04</string>
+    <string name="label_name">Name:</string>
+    <string name="label_address">Address:</string>
+    <string name="label_save">Save</string>
+    <string name="label_type">Type:</string>
+	<string name="label_take_out">Take-Out</string>
+	<string name="label_sit_down">Sit-Down</string>
+	<string name="label_delivery">Delivery</string>
+
+</resources>

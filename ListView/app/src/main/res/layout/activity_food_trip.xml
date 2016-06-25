@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <TableLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:stretchColumns="1" >
+        <TableRow>
+            <TextView android:text="@string/label_name" />
+            <EditText
+                android:id="@+id/field_name"
+                android:inputType="textCapWords" />
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/label_address" />
+            <EditText
+                android:id="@+id/field_address"
+                android:inputType="textCapWords" />
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/label_type" />
+            <RadioGroup android:id="@+id/rgrp_types" >
+                <RadioButton
+                    android:id="@+id/rbtn_take_out"
+                    android:text="@string/label_take_out" />
+                <RadioButton
+                    android:id="@+id/rbtn_sit_down"
+                    android:text="@string/label_sit_down" />
+                <RadioButton
+                    android:id="@+id/rbtn_delivery"
+                    android:text="@string/label_delivery" />
+            </RadioGroup>
+        </TableRow>
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_save" />
+    </TableLayout>
+
+    <ListView
+        android:id="@+id/restaurants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/details"
+        android:layout_alignParentTop="true" />
+
+</RelativeLayout>

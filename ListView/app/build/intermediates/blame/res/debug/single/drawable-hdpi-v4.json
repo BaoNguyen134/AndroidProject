@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\DELL\\Documents\\GitHub\\AndroidProject\\ListView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\DELL\\Documents\\GitHub\\AndroidProject\\ListView\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\Documents\\GitHub\\AndroidProject\\ListView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\delivery.png",
+        "source": "C:\\Users\\DELL\\Documents\\GitHub\\AndroidProject\\ListView\\app\\src\\main\\res\\drawable-hdpi\\delivery.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\Documents\\GitHub\\AndroidProject\\ListView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\sitdown.png",
+        "source": "C:\\Users\\DELL\\Documents\\GitHub\\AndroidProject\\ListView\\app\\src\\main\\res\\drawable-hdpi\\sitdown.png"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\Documents\\GitHub\\AndroidProject\\ListView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\takeout.png",
+        "source": "C:\\Users\\DELL\\Documents\\GitHub\\AndroidProject\\ListView\\app\\src\\main\\res\\drawable-hdpi\\takeout.png"
+    }
+]

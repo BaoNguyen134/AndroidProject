@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Project E</string>
+    <string name="title_activity_main">Project E</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="bg01">IC 555</string>
+    <string name="mach555"><![CDATA[Trong mạch trên ta có: * Mạch định tần số của xung phụ thuộc vào trị các điện trở RV1, R1, R2 và các tụ C1, C2. Vậy khi Bạn dùng tụ nhỏ C2, Bạn sẽ tạo ra tín hiệu dạng xung có tần số cao, lúc này biến trở RV1 dùng để chỉnh chọn tần. Khi Bạn đổi qua dùng tụ hóa C1 có trị điện dung lớn hơn, Bạn sẽ tạo ra xung có tần số thấp hơn, và cũng chỉnh tần với biến trở RV1. * Xung ra lấy trên chân số 3. Khi chân 3 ở mức áp thấp, 0V, thì Led xanh D1 sáng và khi chân 3 ở mức áp cao gần bằng 12V thì Led đỏ D2 sáng. Điện trở R3, R4 dùng để hạn dòng làm việc của các Led, Bạn nhớ không để dòng qua Led quá lớn dễ làm hư Led. Xung ra trên chân 3 là dạng xung vuông với bờ lên và bờ xuống rất thẳng, dùng dạng xung này kích thích các mạch số là rất tốt. * Xung lấy ra trên chân 2 và 6 có dạng răng cưa, khi chân 7 ở lúc hở masse, thì tụ C1 hay tụ C2 sẽ nạp điện nguồn, dòng nạp qua RV1, R1, R2, mức áp trên chân 2, 6 tăng dần lên, khi mức áp này bằng 2/3 mức nguồn thì chân 7 sẽ cho nối masse, lúc này tụ C1, hay C2 sẽ cho xả điện, dòng xả qua R2. Vậy công dụng của R2 là hạn chế không để dòng xả quá lớn sẽ làm hư ic 555, và khi mức áp trên chân 2, 6 xuống bằng &#8531; mức áp nguồn thì chân 7 lại hở masse, tụ lại chuyển qua thời kỳ nạp điện…. Để tín hiệu ra có dạng xung vuông với hệ số duty = 50%, Bạn lấy trị R2 đủ nhỏ so với trị của RV1 + R1.\n * Công thức tính tần số và chu kỳ:\n ln2=0.693\n T=0.693*(R1+2R2)*C\n f=1/T\n Tn=0.693*(R1+R2)*C\n Tx=0.693*R2*C\n T=Tn+Tx \nGhi chú: Khi lấy xung răng cưa trên chân 2, 6 để làm tín hiệu thử mạch, Bạn phải chú ý đến ảnh hưởng của mạch ngoài lên mạch định tần với RV1, R1, R2 và các tụ C1, C2, nội trở của mạch ngoài sẽ làm thay đổi tần số của tín hiệu, cách hay nhất là Bạn dùng thêm tầng khuếch đại đệm để cách ly trở kháng của mạch thử với mạch định tần của ic 555.]]></string>
+</resources>

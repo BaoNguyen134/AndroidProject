@@ -1,0 +1,7 @@
+CHANGED,C:\Users\DELL\Documents\GitHub\AndroidProject\AndroidConnectingToPhpMySQL\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,C:\Users\DELL\Documents\GitHub\AndroidProject\AndroidConnectingToPhpMySQL\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\androidhive\EditProductActivity$SaveProductDetails$override.class
+CHANGED,C:\Users\DELL\Documents\GitHub\AndroidProject\AndroidConnectingToPhpMySQL\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\androidhive\EditProductActivity$GetProductDetails$1$override.class
+CHANGED,C:\Users\DELL\Documents\GitHub\AndroidProject\AndroidConnectingToPhpMySQL\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\androidhive\AllProductsActivity$override.class
+CHANGED,C:\Users\DELL\Documents\GitHub\AndroidProject\AndroidConnectingToPhpMySQL\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\androidhive\NewProductActivity$override.class
+CHANGED,C:\Users\DELL\Documents\GitHub\AndroidProject\AndroidConnectingToPhpMySQL\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\androidhive\EditProductActivity$override.class
+CHANGED,C:\Users\DELL\Documents\GitHub\AndroidProject\AndroidConnectingToPhpMySQL\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\androidhive\EditProductActivity$DeleteProduct$override.class

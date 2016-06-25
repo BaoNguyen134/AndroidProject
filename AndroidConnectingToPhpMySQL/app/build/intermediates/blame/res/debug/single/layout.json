@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\DELL\\Documents\\GitHub\\AndroidProject\\AndroidConnectingToPhpMySQL\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main_screen.xml",
+        "source": "C:\\Users\\DELL\\Documents\\GitHub\\AndroidProject\\AndroidConnectingToPhpMySQL\\app\\src\\main\\res\\layout\\main_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\Documents\\GitHub\\AndroidProject\\AndroidConnectingToPhpMySQL\\app\\build\\intermediates\\res\\merged\\debug\\layout\\edit_product.xml",
+        "source": "C:\\Users\\DELL\\Documents\\GitHub\\AndroidProject\\AndroidConnectingToPhpMySQL\\app\\src\\main\\res\\layout\\edit_product.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\Documents\\GitHub\\AndroidProject\\AndroidConnectingToPhpMySQL\\app\\build\\intermediates\\res\\merged\\debug\\layout\\all_products.xml",
+        "source": "C:\\Users\\DELL\\Documents\\GitHub\\AndroidProject\\AndroidConnectingToPhpMySQL\\app\\src\\main\\res\\layout\\all_products.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\Documents\\GitHub\\AndroidProject\\AndroidConnectingToPhpMySQL\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_item.xml",
+        "source": "C:\\Users\\DELL\\Documents\\GitHub\\AndroidProject\\AndroidConnectingToPhpMySQL\\app\\src\\main\\res\\layout\\list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\Documents\\GitHub\\AndroidProject\\AndroidConnectingToPhpMySQL\\app\\build\\intermediates\\res\\merged\\debug\\layout\\add_product.xml",
+        "source": "C:\\Users\\DELL\\Documents\\GitHub\\AndroidProject\\AndroidConnectingToPhpMySQL\\app\\src\\main\\res\\layout\\add_product.xml"
+    }
+]
