@@ -337,6 +337,17 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+    public void TatNhay(View view) {
+        try {
+            Message msg = new Message();
+            msg.what = 0x852;
+            msg.obj = "TATNHAY";
+            clientThread.sendHandler.sendMessage(msg);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 
